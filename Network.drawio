@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Mobile/15E148 Safari/604.1" version="29.4.0">
+  <diagram name="Page-1" id="LwmtB32DIm4gS29UOk3I">
+    <mxGraphModel dx="945" dy="1585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;" value="UGANDA CHRISTIAN UNIVERSITY - DUAL CAMPUS NETWORK (IPv4 + IPv6)" vertex="1">
+          <mxGeometry height="40" width="1000" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mainBox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="MAIN CAMPUS&#xa;Layer 3 Core Switch (Inter-VLAN Routing)&#xa;IPv4 Block: 10.10.0.0/16&#xa;IPv6 Block: 2001:db8:acad::/48" vertex="1">
+          <mxGeometry height="600" width="700" x="50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="coreSwitch" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="CORE L3 SWITCH&#xa;SVI Gateways&#xa;VLAN 10,20,30,40,60,70" vertex="1">
+          <mxGeometry height="100" width="200" x="300" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mainRouter" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="MAIN ROUTER&#xa;WAN: 10.10.250.1&#xa;IPv6: 2001:db8:acad:250::1" vertex="1">
+          <mxGeometry height="100" width="200" x="290" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="facA" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" value="Faculty A&#xa;VLANs 10-70&#xa;10.10.11.0/24&#xa;2001:db8:acad:11::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="100" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="facB" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" value="Faculty B&#xa;10.10.21.0/24&#xa;2001:db8:acad:21::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="facC" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" value="Faculty C&#xa;10.10.31.0/24&#xa;2001:db8:acad:31::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="540" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="secBox" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="SECONDARY CAMPUS&#xa;Router-on-a-Stick&#xa;IPv4 High Range&#xa;IPv6 High Range" vertex="1">
+          <mxGeometry height="600" width="700" x="850" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="branchRouter" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="BRANCH ROUTER&#xa;Subinterfaces VLAN 10-70&#xa;WAN: 10.10.250.2&#xa;IPv6: 2001:db8:acad:250::2" vertex="1">
+          <mxGeometry height="120" width="220" x="1100" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="facX" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="Faculty X&#xa;10.10.210.0/24&#xa;2001:db8:acad:210::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="900" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="facY" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="Faculty Y&#xa;10.10.220.0/24&#xa;2001:db8:acad:220::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="1120" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="facZ" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;" value="Faculty Z&#xa;10.10.230.0/24&#xa;2001:db8:acad:230::/64" vertex="1">
+          <mxGeometry height="120" width="200" x="1340" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="wan" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="WAN LINK&#xa;IPv4: 10.10.250.0/30&#xa;IPv6: 2001:db8:acad:250::/64" vertex="1">
+          <mxGeometry height="120" width="300" x="650" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" edge="1" parent="1" source="coreSwitch" style="endArrow=classic;html=1;rounded=0;" target="mainRouter" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="mainRouter" style="endArrow=classic;html=1;rounded=0;" target="wan" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="370" />
+              <mxPoint x="600" y="370" />
+              <mxPoint x="600" y="160" />
+            </Array>
+            <mxPoint x="500" y="370" as="sourcePoint" />
+            <mxPoint x="650" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="branchRouter" style="endArrow=classic;html=1;rounded=0;" target="wan" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="310" />
+              <mxPoint x="1000" y="310" />
+              <mxPoint x="1000" y="160" />
+            </Array>
+            <mxPoint x="1100" y="310" as="sourcePoint" />
+            <mxPoint x="950" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn4" edge="1" parent="1" source="coreSwitch" style="endArrow=classic;html=1;rounded=0;" target="facA" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="280" />
+              <mxPoint x="200" y="280" />
+            </Array>
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="200" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn5" edge="1" parent="1" source="coreSwitch" style="endArrow=classic;html=1;rounded=0;" target="facB" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <mxPoint x="400" y="280" as="sourcePoint" />
+            <mxPoint x="420" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" edge="1" parent="1" source="coreSwitch" style="endArrow=classic;html=1;rounded=0;" target="facC" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="280" />
+              <mxPoint x="640" y="280" />
+            </Array>
+            <mxPoint x="500" y="280" as="sourcePoint" />
+            <mxPoint x="640" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn7" edge="1" parent="1" source="branchRouter" style="endArrow=classic;html=1;rounded=0;" target="facX" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="370" />
+              <mxPoint x="1000" y="370" />
+            </Array>
+            <mxPoint x="1100" y="370" as="sourcePoint" />
+            <mxPoint x="1000" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn8" edge="1" parent="1" source="branchRouter" style="endArrow=classic;html=1;rounded=0;" target="facY" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <mxPoint x="1210" y="370" as="sourcePoint" />
+            <mxPoint x="1220" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn9" edge="1" parent="1" source="branchRouter" style="endArrow=classic;html=1;rounded=0;" target="facZ" value="">
+          <mxGeometry height="50" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="370" />
+              <mxPoint x="1440" y="370" />
+            </Array>
+            <mxPoint x="1320" y="370" as="sourcePoint" />
+            <mxPoint x="1440" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
